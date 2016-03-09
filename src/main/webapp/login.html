@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)http://www.jq22.com/demo/jquery-Sharelink20151012/ -->
+<html lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>登陆丨Sharelink</title>
+	<link rel="stylesheet" href="./css/login.css">
+
+
+</head>
+<body>
+
+	<div class="login-container">
+		<a href="/index.html"><h1>I,Free,Share</h1></a>
+
+		<div class="connect">
+			<p style="left: 0%;">爱自由. 爱分享.LOVE THE WORLD！！</p>
+		</div>
+
+		<form action="/login" method="post" id="loginForm" novalidate="novalidate">
+			<div>
+				<input type="text" name="username" class="username"
+					placeholder="用户名" autocomplete="off">
+			</div>
+			<div>
+				<input type="password" name="password" class="password"
+					placeholder="密码" oncontextmenu="return false"
+					onpaste="return false">
+			</div>
+			<button id="submit" type="submit">登 陆</button>
+		</form>
+
+		<a href="./register.html">
+			<button type="button" class="register-tis">还有没有账号？</button>
+		</a>
+
+	</div>
+<script src="./js/jquery.js">
+</script>
+	<script src="./js/loginAndRegisterCommon.js"></script>
+	<!--背景图片自动更换-->
+	<script src="./js/supersized.3.2.7.min.js"></script>
+	<script src="./js/supersized-init.js"></script>
+	<!--表单验证-->
+	<script src="./js/jquery.validate.min.js"></script>
+</body>
+</html>

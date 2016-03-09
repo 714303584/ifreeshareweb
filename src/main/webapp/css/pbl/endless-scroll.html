@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<!-- saved from url=(0068)http://www.jq22.com/demo/jquery-pbl-150519204337/endless-scroll.html -->
+<html lang="zh"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<meta charset="UTF-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>仿Pinterest超酷jQuery瀑布流动态网格布局插件</title>
+
+	<link rel="stylesheet" type="text/css" href="normalize.css">
+
+	<link rel="stylesheet" type="text/css" href="default.css">
+
+	<!-- Global CSS for the page and tiles -->
+
+  	<link rel="stylesheet" href="http://www.jq22.com/demo/jquery-pbl-150519204337/css/main.css">
+
+	<!--[if IE]>
+
+		<script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+
+	<![endif]-->
+
+</head>
+
+<body>
+
+	<div class="htmleaf-container">
+
+		<header class="htmleaf-header">
+
+			<h1>仿Pinterest超酷jQuery瀑布流动态网格布局插件 - 无限加载<span>A jQuery plugin  that lays out a series of elements in a dynamic column grid layout like pinterest.com</span></h1>
+
+			
+
+			<div class="htmleaf-demo center">
+
+			  <a href="http://www.jq22.com/demo/jquery-pbl-150519204337/index.html">默认</a>
+
+			  <a href="endless-scroll.html" class="current">无限加载</a>
+
+			  <a href="http://www.jq22.com/demo/jquery-pbl-150519204337/filter.html">过滤功能</a>
+
+			  <a href="http://www.jq22.com/demo/jquery-pbl-150519204337/flexible.html">Flexible</a>
+
+			  <a href="http://www.jq22.com/demo/jquery-pbl-150519204337/lightbox.html">Lightbox</a>
+
+			  <a href="http://www.jq22.com/demo/jquery-pbl-150519204337/load-images.html">动态加载图片</a>
+
+			  <a href="http://www.jq22.com/demo/jquery-pbl-150519204337/placeholder.html">图片占位</a>
+
+			  <a href="http://www.jq22.com/demo/jquery-pbl-150519204337/sort.html">图片排序</a>
+
+			</div>
+
+		</header>
+
+		<div role="main">
+
+	      	<ul id="container" class="tiles-wrap animated" style="display: block; height: 1566px;">
+
+	        <!-- These are our grid blocks -->
+
+	        <li data-wookmark-id="0" data-wookmark-height="347" data-wookmark-top="0" style="position: absolute; top: 0px; left: 39px;"><img src="image_1.jpg" width="200" height="283"><p>1</p></li>
+
+	        <li data-wookmark-id="1" data-wookmark-height="364" data-wookmark-top="0" style="position: absolute; top: 0px; left: 269px;"><img src="image_2.jpg" width="200" height="300"><p>2</p></li>
+
+	        <li data-wookmark-id="2" data-wookmark-height="316" data-wookmark-top="0" style="position: absolute; top: 0px; left: 499px;"><img src="image_3.jpg" width="200" height="252"><p>3</p></li>
+
+	        <li data-wookmark-id="3" data-wookmark-height="222" data-wookmark-top="0" style="position: absolute; top: 0px; left: 729px;"><img src="image_4.jpg" width="200" height="158"><p>4</p></li>
+
+	        <li data-wookmark-id="4" data-wookmark-height="364" data-wookmark-top="0" style="position: absolute; top: 0px; left: 959px;"><img src="image_5.jpg" width="200" height="300"><p>5</p></li>
+
+	        <li data-wookmark-id="5" data-wookmark-height="361" data-wookmark-top="0" style="position: absolute; top: 0px; left: 1189px;"><img src="image_6.jpg" width="200" height="297"><p>6</p></li>
+
+	        <li data-wookmark-id="6" data-wookmark-height="264" data-wookmark-top="0" style="position: absolute; top: 0px; left: 1419px;"><img src="image_7.jpg" width="200" height="200"><p>7</p></li>
+
+	        <li data-wookmark-id="7" data-wookmark-height="264" data-wookmark-top="0" style="position: absolute; top: 0px; left: 1649px;"><img src="image_8.jpg" width="200" height="200"><p>8</p></li>
+
+	        <li data-wookmark-id="8" data-wookmark-height="462" data-wookmark-top="242" style="position: absolute; top: 242px; left: 729px;"><img src="image_9.jpg" width="200" height="398"><p>9</p></li>
+
+	        <li data-wookmark-id="9" data-wookmark-height="330" data-wookmark-top="284" style="position: absolute; top: 284px; left: 1419px;"><img src="image_10.jpg" width="200" height="267"><p>10</p></li>
+
+	        <li data-wookmark-id="10" data-wookmark-height="346" data-wookmark-top="284" style="position: absolute; top: 284px; left: 1649px;"><img src="image_1.jpg" width="200" height="283"><p>11</p></li>
+
+	        <li data-wookmark-id="11" data-wookmark-height="363" data-wookmark-top="336" style="position: absolute; top: 336px; left: 499px;"><img src="image_2.jpg" width="200" height="300"><p>12</p></li>
+
+	        <li data-wookmark-id="12" data-wookmark-height="315" data-wookmark-top="367" style="position: absolute; top: 367px; left: 39px;"><img src="image_3.jpg" width="200" height="252"><p>13</p></li>
+
+	        <li data-wookmark-id="13" data-wookmark-height="221" data-wookmark-top="381" style="position: absolute; top: 381px; left: 1189px;"><img src="image_4.jpg" width="200" height="158"><p>14</p></li>
+
+	        <li data-wookmark-id="14" data-wookmark-height="363" data-wookmark-top="384" style="position: absolute; top: 384px; left: 269px;"><img src="image_5.jpg" width="200" height="300"><p>15</p></li>
+
+	        <li data-wookmark-id="15" data-wookmark-height="360" data-wookmark-top="384" style="position: absolute; top: 384px; left: 959px;"><img src="image_6.jpg" width="200" height="297"><p>16</p></li>
+
+	        <li data-wookmark-id="16" data-wookmark-height="263" data-wookmark-top="622" style="position: absolute; top: 622px; left: 1189px;"><img src="image_7.jpg" width="200" height="200"><p>17</p></li>
+
+	        <li data-wookmark-id="17" data-wookmark-height="263" data-wookmark-top="634" style="position: absolute; top: 634px; left: 1419px;"><img src="image_8.jpg" width="200" height="200"><p>18</p></li>
+
+	        <li data-wookmark-id="18" data-wookmark-height="461" data-wookmark-top="650" style="position: absolute; top: 650px; left: 1649px;"><img src="image_9.jpg" width="200" height="398"><p>19</p></li>
+
+	        <li data-wookmark-id="19" data-wookmark-height="330" data-wookmark-top="702" style="position: absolute; top: 702px; left: 39px;"><img src="image_10.jpg" width="200" height="267"><p>20</p></li>
+
+	        <li data-wookmark-id="20" data-wookmark-height="346" data-wookmark-top="719" style="position: absolute; top: 719px; left: 499px;"><img src="image_1.jpg" width="200" height="283"><p>21</p></li>
+
+	        <li data-wookmark-id="21" data-wookmark-height="363" data-wookmark-top="724" style="position: absolute; top: 724px; left: 729px;"><img src="image_2.jpg" width="200" height="300"><p>22</p></li>
+
+	        <li data-wookmark-id="22" data-wookmark-height="315" data-wookmark-top="764" style="position: absolute; top: 764px; left: 959px;"><img src="image_3.jpg" width="200" height="252"><p>23</p></li>
+
+	        <li data-wookmark-id="23" data-wookmark-height="221" data-wookmark-top="767" style="position: absolute; top: 767px; left: 269px;"><img src="image_4.jpg" width="200" height="158"><p>24</p></li>
+
+	        <li data-wookmark-id="24" data-wookmark-height="363" data-wookmark-top="905" style="position: absolute; top: 905px; left: 1189px;"><img src="image_5.jpg" width="200" height="300"><p>25</p></li>
+
+	        <li data-wookmark-id="25" data-wookmark-height="360" data-wookmark-top="917" style="position: absolute; top: 917px; left: 1419px;"><img src="image_6.jpg" width="200" height="297"><p>26</p></li>
+
+	        <li data-wookmark-id="26" data-wookmark-height="263" data-wookmark-top="1008" style="position: absolute; top: 1008px; left: 269px;"><img src="image_7.jpg" width="200" height="200"><p>27</p></li>
+
+	        <li data-wookmark-id="27" data-wookmark-height="263" data-wookmark-top="1052" style="position: absolute; top: 1052px; left: 39px;"><img src="image_8.jpg" width="200" height="200"><p>28</p></li>
+
+	        <li data-wookmark-id="28" data-wookmark-height="461" data-wookmark-top="1085" style="position: absolute; top: 1085px; left: 499px;"><img src="image_9.jpg" width="200" height="398"><p>29</p></li>
+
+	        <li data-wookmark-id="29" data-wookmark-height="330" data-wookmark-top="1099" style="position: absolute; top: 1099px; left: 959px;"><img src="image_10.jpg" width="200" height="267"><p>30</p></li>
+
+	        <!-- End of grid blocks -->
+
+	      </ul>
+
+    	</div>
+
+		
+
+	</div>
+
+	
+
+	<!-- include jQuery -->
+
+	  <script src="jquery.min(1).js"></script>
+
+	  <!-- Include the imagesLoaded plug-in -->
+
+  	<script src="imagesloaded.pkgd.min.js"></script>
+
+
+
+	  <!-- Include the plug-in -->
+
+	  <script src="wookmark.js"></script>
+
+
+
+	  <!-- Once the page is loaded, initalize the plug-in. -->
+
+	  <script type="text/javascript">
+
+	    (function ($) {
+
+	      // Instantiate wookmark after all images have been loaded
+
+	      var wookmark,
+
+	          container = '#container',
+
+	          $container = $(container),
+
+	          $window = $(window),
+
+	          $document = $(document);
+
+
+
+	      imagesLoaded(container, function () {
+
+	        wookmark = new Wookmark(container, {
+
+	          offset: 20, // Optional, the distance between grid items
+
+	          itemWidth: 210 // Optional, the width of a grid item
+
+	        });
+
+	      });
+
+
+
+	      /**
+
+	       * When scrolled all the way to the bottom, add more tiles
+
+	       */
+
+	      function onScroll() {
+
+	        // Check if we're within 100 pixels of the bottom edge of the broser window.
+
+	        var winHeight = window.innerHeight ? window.innerHeight : $window.height(), // iphone fix
+
+	            closeToBottom = ($window.scrollTop() + winHeight > $document.height() - 100);
+
+
+
+	        if (closeToBottom) {
+
+	          // Get the first then items from the grid, clone them, and add them to the bottom of the grid
+
+	          var $items = $('li', $container),
+
+	              $firstTen = $items.slice(0, 10).clone().css('opacity', 0);
+
+	          $container.append($firstTen);
+
+
+
+	          wookmark.initItems();
+
+	          wookmark.layout(true, function () {
+
+	            // Fade in items after layout
+
+	            setTimeout(function() {
+
+	              $firstTen.css('opacity', 1);
+
+	            }, 300);
+
+	          });
+
+	        }
+
+	      };
+
+
+
+	      // Capture scroll event.
+
+	      $window.bind('scroll.wookmark', onScroll);
+
+	    })(jQuery);
+
+	  </script>
+
+
+
+</body></html>

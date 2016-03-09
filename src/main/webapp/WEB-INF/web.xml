@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0">
+
+
+		<filter>
+		<filter-name>CharacterEncodingFilter</filter-name>
+		<filter-class>com.ifreeshare.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>characterEncoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+		<init-param>
+			<param-name>enabled</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>CharacterEncodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+
+	<filter>
+		<filter-name>PermissionFilter</filter-name>
+		<filter-class>com.ifreeshare.filter.PermissionFilter</filter-class>
+		<init-param>
+			<param-name>filterURL</param-name>
+			<param-value>/share000.html</param-value>
+		</init-param>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>PermissionFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+
+
+	<servlet>
+		<servlet-name>WebListServlet</servlet-name>
+		<servlet-class>com.ifreeshare.servlet.WebListServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>WebListServlet</servlet-name>
+		<url-pattern>/webresources.html</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>DocSearchServlet</servlet-name>
+		<servlet-class>com.ifreeshare.servlet.DocSearchServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DocSearchServlet</servlet-name>
+		<url-pattern>/docsearch.html</url-pattern>
+	</servlet-mapping>
+
+
+
+
+
+	<servlet>
+		<servlet-name>ImagesIndexServlet</servlet-name>
+		<servlet-class>com.ifreeshare.servlet.ImagesIndexServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ImagesIndexServlet</servlet-name>
+		<url-pattern>/images.html</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>AboutUsServlet</servlet-name>
+		<servlet-class>com.ifreeshare.servlet.AboutUsServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AboutUsServlet</servlet-name>
+		<url-pattern>/aboutus.html</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>WebCopyrightServlet</servlet-name>
+		<servlet-class>com.ifreeshare.servlet.WebCopyrightServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>WebCopyrightServlet</servlet-name>
+		<url-pattern>/copyright_wzsm.html</url-pattern>
+	</servlet-mapping>
+
+
+
+
+	<servlet>
+		<servlet-name>LoginServlet</servlet-name>
+		<servlet-class>com.ifreeshare.servlet.LoginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern>/login</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>TypeListServlet</servlet-name>
+		<servlet-class>com.ifreeshare.servlet.TypeListServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TypeListServlet</servlet-name>
+		<url-pattern>/list.html</url-pattern>
+	</servlet-mapping>
+
+
+
+	<servlet>
+		<servlet-name>FileDownLoadServlet</servlet-name>
+		<servlet-class>com.ifreeshare.servlet.FileDownLoadServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FileDownLoadServlet</servlet-name>
+		<url-pattern>/download</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>holle_freemaker</servlet-name>
+		<servlet-class>com.ifreeshare.core.servlet.TestFree</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>holle_freemaker</servlet-name>
+		<url-pattern>/hello</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>IndexServlet</servlet-name>
+		<servlet-class>com.ifreeshare.servlet.IndexServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>IndexServlet</servlet-name>
+		<url-pattern>/index.html</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ShareFileEditServlet</servlet-name>
+		<servlet-class>com.ifreeshare.servlet.ShareFileEditServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ShareFileEditServlet</servlet-name>
+		<url-pattern>/fileEdit</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>DocShowServlet</servlet-name>
+		<servlet-class>com.ifreeshare.servlet.DocShowServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DocShowServlet</servlet-name>
+		<url-pattern>/doc.html</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>MD5CheckServlet</servlet-name>
+		<servlet-class>com.ifreeshare.servlet.MD5CheckServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MD5CheckServlet</servlet-name>
+		<url-pattern>/uniqueCheck</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ShareServlet</servlet-name>
+		<servlet-class>com.ifreeshare.servlet.ShareServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ShareServlet</servlet-name>
+		<url-pattern>/share.html</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>TokenServlet</servlet-name>
+		<servlet-class>com.ifreeshare.servlet.TokenServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TokenServlet</servlet-name>
+		<url-pattern>/tk</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>StreamServlet</servlet-name>
+		<servlet-class>com.ifreeshare.servlet.StreamServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>StreamServlet</servlet-name>
+		<url-pattern>/upload</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>FormDataServlet</servlet-name>
+		<servlet-class>com.ifreeshare.servlet.FormDataServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FormDataServlet</servlet-name>
+		<url-pattern>/fd</url-pattern>
+	</servlet-mapping>
+
+
+
+
+
+	<servlet>
+		<servlet-name>freemarker</servlet-name>
+		<servlet-class>freemarker.ext.servlet.FreemarkerServlet</servlet-class>
+		<init-param>
+			<param-name>TemplatePath</param-name>
+			<param-value>/template/</param-value>
+		</init-param>
+		<init-param>
+			<param-name>NoCache</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<init-param>
+			<param-name>ContentType</param-name>
+			<param-value>text/html; charset=UTF-8</param-value>
+		</init-param>
+		<init-param>
+			<param-name>template_update_delay</param-name>
+			<param-value>0</param-value>
+		</init-param>
+		<init-param>
+			<param-name>default_encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+		<init-param>
+			<param-name>number_format</param-name>
+			<param-value>0.##########</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>freemarker</servlet-name>
+		<url-pattern>*.ftl</url-pattern>
+	</servlet-mapping>
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>FreeMarker MVC Views</web-resource-name>
+			<url-pattern>*.ftl</url-pattern>
+		</web-resource-collection>
+		<auth-constraint>
+		</auth-constraint>
+	</security-constraint>
+
+</web-app>
