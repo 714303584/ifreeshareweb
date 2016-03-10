@@ -1,5 +1,6 @@
 package com.ifreeshare.factory;
 
+import java.awt.Image;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -10,6 +11,7 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
 import com.ifreeshare.entity.Document;
+import com.ifreeshare.tools.ImageFactory;
 import com.ifreeshare.tools.PdfToSwfFactory;
 import com.ifreeshare.util.ConfigUtil;
 import com.ifreeshare.util.FileAccess;
@@ -100,7 +102,7 @@ public class DocumentSorterFactory {
 					doc.setMd5(md5);
 					
 					if(imgTypes.contains(fileType)){
-						System.out.println(doc.toString());
+						ImageFactory.instant().addDocument(doc);
 					}else if(docTypes.contains(fileType)){
 						PdfToSwfFactory.instant().add(doc);
 					}else{
