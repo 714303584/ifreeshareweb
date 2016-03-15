@@ -21,6 +21,9 @@ import com.ifreeshare.util.ThumbnailTools;
 import com.sun.image.codec.jpeg.JPEGCodec;
 import com.sun.image.codec.jpeg.JPEGImageEncoder;
 
+/**
+ * @author zhuss
+ */
 public class ImageFactory {
 	
 
