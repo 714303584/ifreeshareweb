@@ -104,11 +104,10 @@ public class ImageFactory {
 					BufferedImage bImage = new BufferedImage(200, height / ratio, BufferedImage.TYPE_INT_RGB);
 					bImage.getGraphics().drawImage(resourceImage, 0 , 0 , 200, height / ratio, null);
 					
-					FileOutputStream out= new FileOutputStream("E:\\gaoqingpic\\thumbnail\\"+doc.getMd5()+".jpg");
+					FileOutputStream out= new FileOutputStream("F:\\gaoqingpic\\thumbnail\\"+doc.getMd5()+".jpg");
 			        JPEGImageEncoder encoder = JPEGCodec.createJPEGEncoder(out);
 			        encoder.encode(bImage);
 					out.flush();
-//					ThumbnailTools.getThumbnail(doc.getLocalPath(), , 200, 200);
 					
 					System.out.println(doc.toString()+" \n thumbnail:"+"E:\\gaoqingpic\\thumbnail\\"+doc.getMd5()+".jpg");
 					out.close();

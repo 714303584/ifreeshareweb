@@ -27,7 +27,7 @@ public class DocShowServlet extends HttpServlet {
 				req.setAttribute("docInfo", docInfo);
 				log4j.info(String.format("key:[%s] ",md5));
 				log4j.error("1111111111111111");
-				req.getRequestDispatcher("/doc_show.ftl").forward(req, resp);
+				req.getRequestDispatcher("/show.ftl").forward(req, resp);
 			}else{
 				resp.getOutputStream().print("Not Found!");
 			}

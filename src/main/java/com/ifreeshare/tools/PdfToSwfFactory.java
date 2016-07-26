@@ -131,11 +131,12 @@ public class PdfToSwfFactory {
 						String localPath = doc.getLocalPath();
 						String fileMd5 =  doc.getMd5();
 						String pdfPath = null;
+						System.out.println(doc.toString());
 						String fileType = getFileType(localPath);
 						if(!DOC_TYPE_PDF.equals(fileType)){
 							System.out.println(localPath);
 							String sourcePath = localPath;
-							pdfPath = ConfigUtil.getConfig(COVERT_SAVE_PATH)+fileMd5+"."+DOC_TYPE_PDF;
+							pdfPath = ConfigUtil.webRoot+ ConfigUtil.getConfig(COVERT_SAVE_PATH)+fileMd5+"."+DOC_TYPE_PDF;
 							File outputFile = new File(pdfPath);
 							if("txt".equals(fileType)){
 								String odtPath = ConfigUtil.getConfig(COVERT_SAVE_PATH)+fileMd5+".odt";

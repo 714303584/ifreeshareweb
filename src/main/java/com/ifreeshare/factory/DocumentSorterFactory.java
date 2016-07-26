@@ -97,8 +97,8 @@ public class DocumentSorterFactory {
 					File file = new File(localpath);
 					String loadPath = ConfigUtil.getConfig(ConfigUtil.UPLOAD_PATH);
 					String newName =loadPath+md5+"."+fileType;
-					file.renameTo(new File(newName));
-					doc.setLocalPath(newName);
+//					file.renameTo(new File(newName));
+//					doc.setLocalPath(newName);
 					doc.setMd5(md5);
 					
 					if(imgTypes.contains(fileType)){

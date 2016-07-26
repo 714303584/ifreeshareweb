@@ -212,7 +212,7 @@ public class ThumbnailTools {
 
     public static void main(String[] agrs) {
         //zoomPicture("E:\\1.jpg","E:\\test.jpg",60, 80);
-        getThumbnail("E:\\gaoqingpic\\jpg\\38946.jpg","E:\\gaoqingpic\\thumbnail\\test.jpg",500, 200);
+        getThumbnail("E:\\gaoqingpic\\jpg\\38946.jpg","E:\\gaoqingpic\\thumbnail\\test.jpg",200, 200);
     }
 
 }
